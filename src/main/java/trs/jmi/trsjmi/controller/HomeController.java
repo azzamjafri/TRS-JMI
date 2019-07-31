@@ -2,16 +2,23 @@ package trs.jmi.trsjmi.controller;
 
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/members")
+@RequestMapping
 public class HomeController {
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
+    @RequestMapping(value = "/members", method = RequestMethod.GET)
     public String home(){
-        return "home/membre";
+        return "home/members";
     }
+
+
+    @RequestMapping(value = "/events", method = RequestMethod.GET)
+    public String events(){
+        return "home/events";
+    }
+
+
 }
